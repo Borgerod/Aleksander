@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borgerød</title>
+    <link rel="icon" type="image/x-icon" href="media/images/B_logo.png">
+    <link rel="stylesheet" href="theme.css" type="text/css">
+</head>
+<body>
+    <!-- HEADER -->
+    <nav class="navbar">
+        <div class="logo">MUO</div>
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li class="services">
+                <a href="/">Services</a>
+                <ul class="dropdown">
+                    <li><a href="/">Dropdown 1</a></li>
+                    <li><a href="/">Dropdown 2</a></li>
+                    <li><a href="/">Dropdown 3</a></li>
+                    <li><a href="/">Dropdown 4</a></li>
+                </ul>
+            </li>
+            <li><a href="/">Pricing</a></li>
+            <li><a href="/">Contact</a></li>
+        </ul>
+    </nav>
+    <input type="checkbox" id="checkbox_toggle">
+
+    <!-- MAIN CONTENT -->
+    <main class="main_block">
+        <h2>BEHOLD: I AM THE MAIN</h2>
+        <p>All of the main content is within me, fear me!</p>
+
+        <div class="base_block">
+            <h3>I AM THE UPPER DIV</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>I AM THE LEFT SIDE</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            </div>
+            <div class="col">
+                <h3>I AM THE RIGHT SIDE</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="base_block footer_block" id="footer">
+            <h3>Don't look at me</h3>
+            <p>I am just a stinky footer.</p>
+        </div>
+    </footer>
+</body>
+<script>
+    const checkboxToggle = document.getElementById('checkbox_toggle');
+    const navLinks = document.querySelector('.nav-links');
+    checkboxToggle.addEventListener('change', function() {
+        if (this.checked) {
+            navLinks.classList.add('active');
+        } else {
+            navLinks.classList.remove('active');
+        }
+    });
+</script>
+</html>
