@@ -1,0 +1,136 @@
+
+/* LOGO */
+.logo {
+    font-size: 32px;
+  }
+  
+  
+  /* DROPDOWN MENU */
+  .services {
+    position: relative; 
+  }
+  
+  .services:hover .dropdown {
+    display: block;
+  }
+    
+  .dropdown {
+    list-style: none;
+    background-color: black;
+    opacity: 80%;
+    padding: 1em 0;
+    position: absolute; /*WITH RESPECT TO PARENT*/
+    display: none;
+  }
+  
+  .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+  }
+
+
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 10px 10px;
+    /* padding: 0 0.5em; */
+    padding: 0.5em 1em;
+    /* width: 8em; */
+    text-align: center;
+}
+
+.nav-links li:hover {
+  color: black;
+  background-color: red;
+}
+
+.hamburger {
+    font-size: 24px;
+}
+
+#menu-icon{
+  visibility: hidden
+}
+
+/* Media query for screens below 600px */
+@media screen and (max-width: 600px) {
+    #menu-icon {
+      visibility:visible
+    }
+
+    .nav-links {
+        position: fixed;
+        transform: translateY(-100%);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: black;
+        color: white;
+        list-style: none;
+        padding-top: 6rem;
+        padding-left: 4rem;
+        
+    }
+    .nav-links.active {
+      
+      transform: translateY(0);
+      flex-direction: column;
+      opacity: 0.9;
+    }      
+    
+    .nav-links li {
+        margin: 20px 20px;
+    }
+
+    .hamburger {
+      position: fixed;
+      z-index: 100;
+      top: 2.5rem;
+      right: 2.5rem;
+      padding: 4px;
+    }
+
+    .closeIcon {
+      display: none;
+    }
+    .showMenu {
+      transform: translateY(0) 0.2s;
+    }
+
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        list-style: none;
+    }
+
+    /* 
+    .services:hover .dropdown {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0%;
+      left: 4rem;
+      background-color: #333;
+    } 
+    */
+
+}
