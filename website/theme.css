@@ -1,330 +1,71 @@
-/* _____________________________ UTILITIES _____________________________ */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-body {
-    font-family: 'Franklin Gothic Medium';
-    color: rgb(110, 106, 102);
-    text-align: left;
-  }
-  
-  a {
-    /* text-decoration: none; */
-    text-decoration: aliceblue;
-
-  }
-  
-  li {
-    list-style: none;
-  }
-
-/* _____________________________ CLASSES _____________________________ */
-
-/* ---------------- DIVs ----------------  */
-
-  
-body {
-    margin: 0;
-    padding: 0;
-    background-color: rgba(7, 7, 7, 0.838);
-    display: flex;
-    flex-direction: column;
-}
-
-header{
-    /* margin: 0; */
-    padding: 0;
-    /* Set the height of the header to 100% of the viewport height */
-    /* height: 100vh; */
-    /* display: flex; */ /* turn sidebar */
-}
-/* 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: teal;
-    color: #fff;
-  } */
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    margin: 2%;
-}
-
-.base_block {
-    width: 100%;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.col {
-    width: 48%; /* Adjust as needed to create space between the columns */
-}
-
-
-div {
-    /* display: flex; */
-    /* display: flex; */
-    margin: 10px;
-    padding: 20px 20px;
-    background-color: rgba(7, 7, 7, 0.838);
-    
-}
-
-h3{
-    text-align: center;
-    /* align-self: center; */
-}
-
-
-
-/* NAVBAR STYLING STARTS */
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: teal;
-    color: #fff;
-  }
-  
-  .nav-links a {
-    color: #fff;
-  }
-  
-  /* LOGO */
-  .logo {
-    font-size: 32px;
-  }
-  
-  /* NAVBAR MENU */
-  .menu {
-    display: flex;
-    gap: 1em;
-    font-size: 18px;
-  }
-  
-  .menu li:hover {
-    background-color: #4c9e9e;
-    border-radius: 5px;
-    transition: 0.3s ease;
-  }
-  
-  .menu li {
-    padding: 5px 14px;
-  }
-  
-  /* DROPDOWN MENU */
-  .services {
-    position: relative; 
-  }
-  
-  .dropdown {
-    background-color: rgb(1, 139, 139);
-    padding: 1em 0;
-    position: absolute; /*WITH RESPECT TO PARENT*/
-    display: none;
-    border-radius: 8px;
-    top: 35px;
-  }
-  
-  .dropdown li + li {
-    margin-top: 10px;
-  }
-  
-  .dropdown li {
-    padding: 0.5em 1em;
-    width: 8em;
-    text-align: center;
-  }
-  
-  .dropdown li:hover {
-    background-color: #4c9e9e;
-  }
-  
-  .services:hover .dropdown {
-    display: block;
-  }
-
-
-.header_block {
-    text-align: center;
-    margin: 0;
-}
-
-.main_block{
-    background-color: rgba(16, 12, 23, 0.838);
-}
-
-.footer_block {
-    background-color: rgba(7, 7, 7, 0.838);
-    text-align: center;
-    margin: 0;
-}
-
-/* ---------------- TABLE ----------------  */
-
-/* Create two equal columns that floats next to each other */
-
-.row{
-    background-color:transparent;
-}
-.col {
-    float: left;
-    align-self: auto; 
-    /* flex: none; */
-    /* display: flex; */
-    /* flex-basis:  auto; */
-    /* padding: 10px; */
-    background-color: rgba(7, 7, 7, 0.838);
-    /* flex-grow: 4; */
-}
-
-/* Clear floats after the columns */
-.row:after {
-    /* background-color: transparent; */
-    display: table;
-    flex-direction: column;
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* flex-flow: column wrap; */
-    /* margin: 10%; */
-    content: "";
-    clear: both;
-}
-
-
-    
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: aliceblue;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  background-color: rgba(7, 7, 7, 0.838);
   color: rgb(110, 106, 102);
   text-align: left;
 }
 
 a {
   /* text-decoration: none; */
-  text-decoration: aliceblue;
   font-family: Arial, sans-serif;
   color: rgb(212, 211, 209);
   text-align: left;
 }
 
-li {
-  list-style: none;
-  display: flex;
-  align-items: left;
-  /* margin-right: 10px;  */
-  /* Add some spacing between items */
-  }
-
-  body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-  }
-
-  .navbar {
-      background-color: #333;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 10px 20px;
-  }
-
-  .nav-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-  }
-
-  .nav-links li {
-      margin: 10px 10px;
-  }
-
-  .hamburger {
-      display: none;
-      cursor: pointer;
-      font-size: 24px;
-  }
-
-  /* Media query for screens below 600px */
-  @media screen and (max-width: 600px) {
-      .nav-links {
-          display: none;
-      }
-
-      .hamburger {
-          display: block;
-      }
-
-      .nav-links.active {
-          display: flex;
-          flex-direction: column;
-          position: absolute;
-          top: 50px;
-          right: 20px;
-          background-color: #333;
-      }
-      .dropdown {
-          display: none;
-          position: absolute;
-          background-color: #333;
-          list-style: none;
-          
-      }
-      .services:hover .dropdown {
-          display: flex;
-          flex-direction: column;
-          position: absolute;
-          top: 100%;
-          right: 90%;
-          background-color: #333;
-      }
-  }
-#checkbox_toggle {
-  display: none;
+div {
+  margin: 10px;
+  padding: 20px 20px;
+  background-color: rgba(7, 7, 7, 0.838);
 }
 
-.dropdown {
-  display: none;
-  position: absolute;
-  background-color: #333;
-  list-style: none;
-}
-
-.services:hover .dropdown {
+main {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 5%;
-  background-color: #333;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  margin: 2%;
 }
+
+
+/* FOOTER */
+.footer_block {
+  margin: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+
+
+/* ---------------- TABLE ----------------  */
+
+.row {
+  background-color:transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.col {
+  width: 48%; /* Adjust as needed to create space between the columns */
+}
+
+
 
 
 
@@ -362,12 +103,6 @@ li {
 
     #footer {
         color: antiquewhite;
-        text-align: center;
-        font-size: large;
-    }
-
-    #header {
-        color: rgb(91, 112, 114);
         text-align: center;
     }
 
