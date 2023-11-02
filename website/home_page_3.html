@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css">
+
+<style>
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: rgb(110, 106, 102);
+    text-align: left;
+  }
+  
+  a {
+    /* text-decoration: none; */
+    text-decoration: aliceblue;
+    font-family: Arial, sans-serif;
+    color: rgb(212, 211, 209);
+    text-align: left;
+  }
+  
+  li {
+    list-style: none;
+    display: flex;
+    align-items: left;
+    /* margin-right: 10px;  */
+    /* Add some spacing between items */
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .navbar {
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 10px 10px;
+    }
+
+    .hamburger {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    /* Media query for screens below 600px */
+    @media screen and (max-width: 600px) {
+        .nav-links {
+            display: none;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+        .nav-links.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background-color: #333;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            list-style: none;
+            
+        }
+        .services:hover .dropdown {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            right: 90%;
+            background-color: #333;
+        }
+    }
+  #checkbox_toggle {
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style: none;
+  }
+
+  .services:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5%;
+    background-color: #333;
+  }
+
+
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MUO</div>
+        
+        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+        
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li class="services">
+                <a href="/">Services</a>
+                <ul class="dropdown">
+                    <li><a href="/">Dropdown 1</a></li>
+                    <li><a href="/">Dropdown 2</a></li>
+                    <li><a href="/">Dropdown 3</a></li>
+                    <li><a href="/">Dropdown 4</a></li>
+                </ul>
+            </li>
+            <li><a href="/">Pricing</a></li>
+            <li><a href="/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <input type="checkbox" id="checkbox_toggle">
+</body>
+<script>
+    const checkboxToggle = document.getElementById('checkbox_toggle');
+    const navLinks = document.querySelector('.nav-links');
+    checkboxToggle.addEventListener('change', function() {
+        if (this.checked) {
+            navLinks.classList.add('active');
+        } else {
+            navLinks.classList.remove('active');
+        }
+    });
+</script>
+</html>
