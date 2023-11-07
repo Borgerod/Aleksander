@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borgerød</title>
+    <link rel="icon" type="image/x-icon" href="media/images/B_logo.png">
+    <link rel="stylesheet" href="theme.css" type="text/css">
+    <link rel="stylesheet" href="menu_style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+</head>
+<body>
+
+    <!-- HEADER -->
+    <nav class="navbar">
+        <div class="logo">MUO</div>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+        <a class="purple-head hover-black" onclick="changeIcon(this)" id="myBtn">
+        <i for="checkbox_toggle" id= "menu-icon" class="hamburger fa-solid fa-bars"></i>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li class="services">
+                <a href="/">Services</a>
+                <ul class="dropdown">
+                    <li><a href="/">Dropdown 1</a></li>
+                    <li><a href="/">Dropdown 2</a></li>
+                    <li><a href="/">Dropdown 3</a></li>
+                    <li><a href="/">Dropdown 4</a></li>
+                </ul>
+            </li>
+            <li><a href="/">Pricing</a></li>
+            <li><a href="/">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main_block">
+        <h2>BEHOLD: I AM THE MAIN</h2>
+        <p>All of the main content is within me, fear me!</p>
+
+        <div class="upper_div">
+            <h3>I AM THE UPPER DIV</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>I AM THE LEFT SIDE</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            </div>
+            <div class="col">
+                <h3>I AM THE RIGHT SIDE</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="base_block footer_block">
+            <h3>Don't look at me</h3>
+            <p>I am just a stinky footer.</p>
+        </div>
+    </footer>
+</body>
+<script>
+
+function changeIcon(anchor) {
+  var icon = anchor.querySelector("i");
+  icon.classList.toggle('fa-bars');
+  icon.classList.toggle('fa-xmark');
+  const navLinks = document.querySelector('.nav-links');
+  navLinks = icon.classList.contains('fa-xmark') ? navLinks.classList.add('active') : navLinks.classList.remove('active');
+}
+
+
+</script>
+</html>

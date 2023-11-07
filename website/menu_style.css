@@ -2,38 +2,51 @@
 /* LOGO */
 .logo {
     font-size: 32px;
+    background:#191919;
   }
   
-  
-  /* DROPDOWN MENU */
-  .services {
-    position: relative; 
-  }
   
   .services:hover .dropdown {
     display: block;
   }
     
   .dropdown {
+    display: block;
+    position: absolute;
+    right: 9em;
     list-style: none;
-    background-color: black;
+    background-color: #191919;
     opacity: 80%;
-    padding: 1em 0;
-    position: absolute; /*WITH RESPECT TO PARENT*/
+    padding: 2rem;
+    margin: 0.5rem 2rem;
     display: none;
+    
   }
   
   .dropdown li {
-    padding: 0.5em 1em;
+    
+    padding:0.5em 50%;
     width: 8em;
     text-align: center;
   }
 
 
+
+
+
+
+
+
+
+
+
+
   .navbar {
-    background-color: #333;
-    color: #fff;
-    
+    /* background-color: #333; */
+    /* background:#272727 */
+    /* background-color:#272727; */
+    /* color: #fff; */
+    /* color:white; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -49,14 +62,12 @@
 
 .nav-links li {
     margin: 10px 10px;
-    /* padding: 0 0.5em; */
     padding: 0.5em 1em;
-    /* width: 8em; */
     text-align: center;
 }
 
 .nav-links li:hover {
-  color: black;
+  /* color: black; */
   background-color: red;
 }
 
@@ -68,10 +79,9 @@
   visibility: hidden
 }
 
-/* Media query for screens below 600px */
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
     #menu-icon {
-      visibility:visible
+      visibility: visible;
     }
 
     .nav-links {
@@ -82,14 +92,13 @@
         right: 0;
         bottom: 0;
         background: black;
-        color: white;
+        /* color: white; */
         list-style: none;
         padding-top: 6rem;
         padding-left: 4rem;
-        
     }
-    .nav-links.active {
-      
+
+    .nav-links.active {  
       transform: translateY(0);
       flex-direction: column;
       opacity: 0.9;
@@ -114,23 +123,25 @@
       transform: translateY(0) 0.2s;
     }
 
-
     .dropdown {
-        display: none;
-        position: absolute;
-        background-color: #333;
-        list-style: none;
-    }
+      list-style: none;
+      left:8vw;
+      opacity: 80%;
+      padding: 0vw;
+      margin: 0.5vw;
+      display: none;
+      width: 30vw;
+      
+      text-align: center;
 
-    /* 
-    .services:hover .dropdown {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 0%;
-      left: 4rem;
-      background-color: #333;
-    } 
-    */
+    }
+    
+    .dropdown li {
+      /* padding: 0.5em 1em; */
+      padding: 0.5vw 1vw;
+      /* width: 30vw; */
+      text-align: center;
+    }
+    
 
 }
