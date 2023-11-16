@@ -4,26 +4,25 @@
     <a href="root/home_page.html"></a>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <title>Borgerød</title>
+    <title>MUO Limited</title>
     <link rel="icon" type="image/x-icon" href="media/images/B_logo.png">
     <link rel="stylesheet" href="theme.css" type="text/css">
     <link rel="stylesheet" href="menu_style.css" type="text/css">
     <link rel="stylesheet" href="buttons.css" type="text/css">
+    <script> src="script.js" </script>
 </head>
 <body>
     
     <!-- <landingpage> -->
-<header>
+    <header id="title_image">
 
     <!-- HEADER -->
     <nav class="navbar">
         <div class="logo">MUO</div>
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-            <!-- <a class="purple-head hover-black" onclick="changeIcon(this)" id="myBtn"> -->
             <a onclick="changeIcon(this)">
                 <i  id= "menu-icon" class="hamburger fa-solid fa-bars"></i>
             <ul class="nav-links">
-                <!-- <a onclick="changeIcon(this)"> -->
                 <i  id= "close-icon" class="close fa-solid fa-xmark"></i>
                 <i class="spacer"></i>
                 <li><a href="/">Home</a></li>
@@ -39,14 +38,17 @@
                 </li>
                 <li><a href="/">Pricing</a></li>
                 <li><a href="/">Contact</a></li>
-                <!-- <li><a href="/"></a></li> -->
             </ul>
         </nav>
-        
-        <div id="background_landing_page">
-            <h2>BEHOLD</h2>
-            <h2a>I AM THE MAIN</h2a>
+        <div class="background"> 
+        <!-- id="title_image_blurred"> -->
+            <div class="text" > BEHOLD</div>
         </div>
+        <h1 id="title_image_blurred"> BEHOLD</h1>
+        <!-- <h2 class= "clipped" id="title_image"> BE<strong>hold</strong></strong> </h2> -->
+        <!-- <text color="grey" x="-60" y="60vw" font-family="Arial, sans serif"  font-size="30vw" font-weight="800">BEHOLD</text> -->
+        
+        <h2a class="clipped"> A bunch of Lorem Ipsum</h2a>
     </header>
         <!-- LANDING PAGE -->
         <!-- </landingpage> -->
@@ -55,8 +57,13 @@
     <!-- MAIN CONTENT -->
     <main class="main_block">
 
-
-
+        <text x="-50" y="60vw" font-family="Arial, sans serif"  font-size="10vw" font-weight="800">
+            This text
+            <text  x="-50" y="60vw" font-family="Arial, sans serif"  font-size="30vw" font-weight="200">
+                is 
+            </text> 
+            important!
+        </text>
         <div class="full_div">
             <h3>I AM THE UPPER DIV</h3>
             <p>Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.</p>
