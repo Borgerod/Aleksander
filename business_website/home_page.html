@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <a href="root/home_page.html"></a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Borgerød</title>
+    <link rel="icon" type="image/x-icon" href="media/images/B_logo.png">
+    <link rel="stylesheet" href="theme.css" type="text/css">
+    <link rel="stylesheet" href="menu_style.css" type="text/css">
+    <link rel="stylesheet" href="buttons.css" type="text/css">
+</head>
+<body>
+    
+    <!-- <landingpage> -->
+<header>
+
+    <!-- HEADER -->
+    <nav class="navbar">
+        <div class="logo">MUO</div>
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+            <!-- <a class="purple-head hover-black" onclick="changeIcon(this)" id="myBtn"> -->
+            <a onclick="changeIcon(this)">
+                <i  id= "menu-icon" class="hamburger fa-solid fa-bars"></i>
+            <ul class="nav-links">
+                <!-- <a onclick="changeIcon(this)"> -->
+                <i  id= "close-icon" class="close fa-solid fa-xmark"></i>
+                <i class="spacer"></i>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li class="services">
+                    <a href="/">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="/">Dropdown 1</a></li>
+                        <li><a href="/">Dropdown 2</a></li>
+                        <li><a href="/">Dropdown 3</a></li>
+                        <li><a href="/">Dropdown 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="/">Pricing</a></li>
+                <li><a href="/">Contact</a></li>
+                <!-- <li><a href="/"></a></li> -->
+            </ul>
+        </nav>
+        
+        <div id="background_landing_page">
+            <h2>BEHOLD</h2>
+            <h2a>I AM THE MAIN</h2a>
+        </div>
+    </header>
+        <!-- LANDING PAGE -->
+        <!-- </landingpage> -->
+    
+
+    <!-- MAIN CONTENT -->
+    <main class="main_block">
+
+
+
+        <div class="full_div">
+            <h3>I AM THE UPPER DIV</h3>
+            <p>Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.</p>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>I AM THE LEFT SIDE</h3>
+                <p>Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.</p>
+                <button type="button">Click Me!</button>
+            </div>
+            <div class="col">
+                <h3>I AM THE RIGHT SIDE</h3>
+                <p>Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.</p>
+            </div>
+        </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer_block">
+        <h4>Don't look at me</h4>
+        <p>I am just a stinky footer.</p>
+    </div>
+</footer>
+</body>
+<script>
+
+function changeIcon(anchor) {
+  var icon = anchor.querySelector("i");
+  const navLinks = document.querySelector('.nav-links');
+  navLinks = icon.classList.contains('fa-bars') ? navLinks.classList.add('active') : navLinks.classList.remove('active');
+}
+
+</script>
+</html>
