@@ -1,12 +1,7 @@
 * {
-  /* margin: 0; */
-  /* padding: 0; */
   box-sizing: border-box;
   text-decoration: none;
   color:#adadad;
-  /* font-size: 1em; */
-  /* font-size: 100%; */
-
 }
 
 
@@ -15,23 +10,13 @@ html, body {
   min-height: 100%;
 }
 
+/* __________________________________________________________________________- */
+
 body {
-
-
-  /* margin: 0; */
-  /* padding: 0; */
   font-family: Arial, sans-serif;
-  /* background-color: rgba(7, 7, 7, 0.838); */
-  /* background: #272727; */
-  
   background: linear-gradient(70deg, #7f766f, #272727);
-  /* color: rgb(110, 106, 102); */
   color: #858585;
-  /* text-align: left; */
-  overflow:hidden;
-  /* padding:2vw; */
-  /* margin:2vw; */
-  
+  overflow-x:hidden;
 }
 
 
@@ -40,123 +25,56 @@ h1{
 
   display: flex;
   justify-content:center;
-  /* margin-left:-15vw; */
-
 }
-/* will include header (navbar) and the title (landing page) */
+
 header {
-  /* margin:2vw; */
-  
   background: url("./images/title_background.jpg");
   height:80vw;
   background-repeat: no-repeat;
   background-size: cover;
-  /* width: 100%; */
-  /* flex:gap; */
-  /* display:flex; */
-  /* background-position: absolute; */
-}
-
-
-
-
-/* __________________________________________________________________________- */
+  width: 100%;
+  }
 
 .cut-out-text {
   background: url("./images/title_background_blurry.jpg");
   -webkit-background-clip: text;
-  /* clip: rect(0px,100vw,25vw,0px); */
-  /* background-clip: rect(0vw,25vw,25vw,0vw); */
-  /* background-clip: text; */
-  /* margin:10px; */
-  /* color: transparent; */
   -webkit-text-fill-color: rgb(77, 77, 77, 0.1);
-  
   margin:inherit;
-  
-  /* width: 100%; */
-  /* padding:0; */
-  /* padding:200px, 0, 0, 0; */
-  /* padding-top: 250px; */
-  /* padding-top:25vw; */
-  /* padding-bottom:25vw; */
-
-  /* display:inline-block; */
-  /* display:flex; */
-  /* justify-content:center; */
-
   background-repeat: no-repeat;
   background-size: cover;
-  /* background-size: inherit; */
-  /* position: inherit; */
-  /* background-position: 0 -50px;  */
   position: relative;
-  /* background-top:10vw; */
   top:-10vw;
   height:inherit;
   width:128%;
   padding-top:30vw;
   padding-right:25vw;
-  
-  /* justify-content:center; */
-    /* height:80%; */
-
-
-  /* background-size: 90%; */
-  
-  
-  /* justify-content:center;
-  content-align:center;
-  text-align:center;
-  justify-text:center; */
-}
-
-.cut-out-text::before {
-  /* position: absolute;
-  content: '';
-  z-index: -1; */
-  /* margin-left:-100px; */
-  /* background-position: absolute; */
-  /* LAYER B */
-  
-  /* display:flex; */
-  /* display:inline-block; */
-  
-  /* display: inline-block; */
-  /* content: ''; */
-  /* height:800px; */
-  /* padding-left:-10px; */
-  /* width: 100%; */
-
-  
-  /* justify-content:center; */
-  
-  /* background-repeat: no-repeat; */
-  /* background-size: ; */
-  /* height: 10px; */
-  
-  /* margin:0;   */
-  /* display:flex; */
-  /* background: url("./images/title_background.jpg"); */
-
-  /* overflow: hidden; */
-  /* display:flex; */
-  /* margin: 0 0; */
-
-  /* background-repeat: no-repeat; */
-  /* background-size: cover; */
-  /* z-index: -1;
-}
-
-.cut-out-text::after {
-  /* LAYER A */
-  /* content: ''; */
-  /* display: inline-block; */
-  /* z-index: -2; */
-  /* background: url("./images/title_background_blurry.jpg"); */
+  margin-bottom:-15vw;
 }
 
 /* __________________________________________________________________________- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -167,31 +85,14 @@ header {
 
 h2{
   background-color: #565656;
-  
-  /* filter: blur(10px); */
   display: flex; 
   justify-content:center;
   font-size: 26vw;
-  /* background:lightgrey; */
-  /* color: rgba(0, 0, 0, 0.3); */
-  /* text-shadow: 4px 4px 5px #373; */
-  /* text-shadow: 10px -10px rgba(0, 0, 0, 0.2); */
   margin: 0 25%;
-
   text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.8);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-  /* backdrop-filter:blur(10px); */
-  /* z-index:1; */
-  /* clip-path: url('./images/museum-side-view-night-long-exposure.jpg'); */
-  /* clip-path: url("./images/museum-side-view-night-long-exposure.jpg"); */
-  /* filter: blur(10px); */
-
-  /* flex-direction: column; */
-  /* align-items: center;   */
-  /* display: flex; */
-  /* flex-wrap: wrap; */
   display: flex;
   justify-content:center;
 }
@@ -203,7 +104,6 @@ h2a{
   font-size: 5vw;
   display: flex;
   justify-content:right;
-  /* justify-content:right ; */
 }
 
 h3{
