@@ -40,7 +40,7 @@ h1{
 
   display: flex;
   justify-content:center;
-
+  /* margin-left:-15vw; */
 
 }
 /* will include header (navbar) and the title (landing page) */
@@ -48,45 +48,61 @@ header {
   /* margin:2vw; */
   
   background: url("./images/title_background.jpg");
-  /* height:80vw; */
+  height:80vw;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  /* width: 100%; */
+  /* flex:gap; */
+  /* display:flex; */
   /* background-position: absolute; */
 }
+
+
+
 
 /* __________________________________________________________________________- */
 
 .cut-out-text {
-  
-  /* overflow:hidden; */
-  
-  /* background-position: relative; */
-  /* font-weight: bold; */
   background: url("./images/title_background_blurry.jpg");
-  background-clip: text;
-  /* -webkit-background-clip: text; */
+  -webkit-background-clip: text;
+  /* clip: rect(0px,100vw,25vw,0px); */
+  /* background-clip: rect(0vw,25vw,25vw,0vw); */
+  /* background-clip: text; */
   /* margin:10px; */
   /* color: transparent; */
   -webkit-text-fill-color: rgb(77, 77, 77, 0.1);
+  
+  margin:inherit;
   
   /* width: 100%; */
   /* padding:0; */
   /* padding:200px, 0, 0, 0; */
   /* padding-top: 250px; */
-  padding-top:25vw;
-  padding-bottom:25vw;
-  margin:inherit;
-  /* clip: rect(0px,60px,200px,0px); */
-  
-  /* display:block; */
+  /* padding-top:25vw; */
+  /* padding-bottom:25vw; */
+
+  /* display:inline-block; */
   /* display:flex; */
   /* justify-content:center; */
 
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-size: inherit; */
+  /* position: inherit; */
+  /* background-position: 0 -50px;  */
+  position: relative;
+  /* background-top:10vw; */
+  top:-10vw;
+  height:inherit;
+  width:128%;
+  padding-top:30vw;
+  padding-right:25vw;
+  
+  /* justify-content:center; */
+    /* height:80%; */
+
+
   /* background-size: 90%; */
-  height:80%;
   
   
   /* justify-content:center;
@@ -96,11 +112,15 @@ header {
 }
 
 .cut-out-text::before {
+  /* position: absolute;
+  content: '';
+  z-index: -1; */
   /* margin-left:-100px; */
   /* background-position: absolute; */
   /* LAYER B */
   
-  display:flex;
+  /* display:flex; */
+  /* display:inline-block; */
   
   /* display: inline-block; */
   /* content: ''; */
@@ -123,9 +143,9 @@ header {
   /* display:flex; */
   /* margin: 0 0; */
 
-  /* background-repeat: no-repeat;
-  background-size: cover; */
-  /* z-index: -1; */
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* z-index: -1;
 }
 
 .cut-out-text::after {
@@ -137,8 +157,6 @@ header {
 }
 
 /* __________________________________________________________________________- */
-
-
 
 
 
@@ -185,6 +203,7 @@ h2a{
   font-size: 5vw;
   display: flex;
   justify-content:right;
+  /* justify-content:right ; */
 }
 
 h3{
