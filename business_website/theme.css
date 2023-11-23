@@ -12,7 +12,10 @@ body, html {
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(70deg, #7f766f, #272727);
+  background: linear-gradient(70deg, #7f766f, #272727); 
+    /* TODO [ ]: make gradient reactive to background photo(s). */
+  background-image: url("./images/title_background_blurry.jpg");
+  backdrop-filter: blur(10px);
   color: #858585;
   overflow-x:hidden;
   
@@ -21,6 +24,19 @@ body {
 
 /* ______________________________ HEADER _________________________________ */
 
+
+/* 
+  NOTE: For the menu css, see "menu_style.css" 
+*/
+
+
+/* 
+! ISSUE: when width == ca. 800px the header stretches beyong the screen height. 
+        (does not cover whole window, but covers more)
+*/
+
+
+/* The visisible and back layer of the header, the header contains both nav-bar and title-page.*/
 header{
   background-image: url("./images/title_background.jpg");
   display: flex;
@@ -29,8 +45,13 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   max-height:100vh;
+
+
+  /* background: yellow; */
+  
 }
 
+/* The semi-hidden header blurry header layer, which is clipped in the shape of the title */
 header-layer {
   background-image: url("./images/title_background_blurry.jpg");
   height:100vh;
@@ -38,50 +59,22 @@ header-layer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgb(77, 77, 77, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* background: red; */
 }
+
 
 h1{
-  font: bold 26vw 'Futura';
-  display: flex;
-  justify-content:center;
-
+  font: bold 26vw 'Futura';  
+  /* background: #4CAF50; */
 }
 
-h2{
-  background-color: #565656;
-  display: flex; 
-  justify-content:center;
-  font-size: 26vw;
-  margin: 0 25%;
-  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.8);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  display: flex;
-  justify-content:center;
-}
-
-h2a{
-  color: rgba(144,131,114,255);
-  font-size: 5vw;
-  display: flex;
-  justify-content:right;
-}
-
-h3{
-  color:#9c8470;
-}
-h4{
-  font-size: 4vw;
-  color:#2c2c2c;
-}
-a {
-  font-family: Arial, sans-serif;
-  color: rgb(212, 211, 209);
-  text-align: left;
-}
 
 
 
@@ -136,6 +129,44 @@ FOOTER
   align-items: center;  
   display: flex;
   flex-wrap: wrap;
+}
+
+
+/* ---------------- FONTS ----------------  */
+
+
+h2{
+  background-color: #565656;
+  display: flex; 
+  justify-content:center;
+  font-size: 26vw;
+  margin: 0 25%;
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.8);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  display: flex;
+  justify-content:center;
+}
+
+h2a{
+  color: rgba(144,131,114,255);
+  font-size: 5vw;
+  display: flex;
+  justify-content:right;
+}
+
+h3{
+  color:#9c8470;
+}
+h4{
+  font-size: 4vw;
+  color:#2c2c2c;
+}
+a {
+  font-family: Arial, sans-serif;
+  color: rgb(212, 211, 209);
+  text-align: left;
 }
 
 
