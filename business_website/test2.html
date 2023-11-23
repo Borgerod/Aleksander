@@ -1,0 +1,139 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+    section, div {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        background-color: none;
+      }
+
+      /* #top-bar {
+        background: yellow;
+        color: red;
+      } */
+
+    #top-bar{
+        position: relative;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        /* background: blue; */
+        background: url("images/title_background.jpg");
+        /* background: linear-gradient(70deg, #7f766f, #272727);  */
+       
+    }
+    /* #top-bar::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--gradient);
+        background-repeat: no-repeat;
+        background-size: cover;
+        06+i7F/WKt3qvu+ffzK+qE/2ndf9dn/9CNFNkkfzG+dup70VnzM3Uj//2Q==");
+        background-size: cover;
+        filter: blur(10px);
+        transform: scale(3);
+    } */
+    mydiv{
+        background-color: inherit;
+    }
+
+      </style>
+</head>
+<body>
+    <header>
+        HELLO
+    </header>
+    <img id="top-bar" src="images/title_background.jpg">
+        Text
+    </section>
+    <section id="header">
+        Text
+    </section>
+    <div id="left">
+        Text
+    </div>
+    <section id="footer">
+        Text
+    </section>
+    <mydiv> ..
+        
+    </mydiv>
+    
+    <img id="i" src="images/title_background.jpg" />
+</body>
+</html>
+
+
+<script>
+
+
+var rgb = getAverageRGB(document.getElementById('top-bar'));
+// var rgb = getAverageRGB(document.getElementById('top-bar').style.getImageData)
+// var rgb = getAverageRGB(document.querySelector('section').style.backgroundImage)
+// ('background'));
+// getProperty('background-image'));
+    document.getElementById("header").style.setProperty('background', 'linear-gradient(70deg, ' + '#7f766f'+ ',' + 'rgb('+rgb.r+','+rgb.g+','+rgb.b+')'+ ')', 'important');
+
+function getAverageRGB(imgEl) {
+    
+    var blockSize = 5, // only visit every 5 pixels
+        defaultRGB = {r:0,g:0,b:0}, // for non-supporting envs
+        canvas = document.createElement('canvas'),
+        context = canvas.getContext && canvas.getContext('2d'),
+        data, width, height,
+        i = -4,
+        length,
+        rgb = {r:0,g:0,b:0},
+        count = 0;
+        
+    if (!context) {
+        return defaultRGB;
+    }
+    
+    height = canvas.height = imgEl.naturalHeight || imgEl.offsetHeight || imgEl.height;
+    width = canvas.width = imgEl.naturalWidth || imgEl.offsetWidth || imgEl.width;
+    
+    context.drawImage(imgEl, 0, 0);
+    
+    try {
+        data = context.getImageData(0, 0, width, height);
+    } catch(e) {
+        /* security error, img on diff domain */alert('x');
+        return defaultRGB;
+    }
+    
+    length = data.data.length;
+    
+    while ( (i += blockSize * 4) < length ) {
+        ++count;
+        rgb.r += data.data[i];
+        rgb.g += data.data[i+1];
+        rgb.b += data.data[i+2];
+    }
+    
+    // ~~ used to floor values
+    rgb.r = ~~(rgb.r/count);
+    rgb.g = ~~(rgb.g/count);
+    rgb.b = ~~(rgb.b/count);
+    
+    return rgb;
+    
+}
+
+
+</script>
+
+
+
