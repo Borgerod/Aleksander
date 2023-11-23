@@ -1,15 +1,9 @@
-* {
-  box-sizing: border-box;
-  text-decoration: none;
-  color:#adadad;
-}
 
-
-html, body {
+body, html {
+  height: 100%;
   margin: 0;
-  min-height: 100%;
+  overflow-x: hidden;
 }
-
 /* __________________________________________________________________________- */
 
 body {
@@ -17,22 +11,45 @@ body {
   background: linear-gradient(70deg, #7f766f, #272727);
   color: #858585;
   overflow-x:hidden;
+  
 }
 
+header{
+  background-image: url("./images/title_background.jpg");
+  display: flex;
+  flex-direction:column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height:100vh;
+}
+
+header-layer {
+  background-image: url("./images/title_background_blurry.jpg");
+  height:100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgb(77, 77, 77, 0.1);
+}
 
 h1{
   font: bold 26vw 'Futura';
-
   display: flex;
   justify-content:center;
+
 }
 
+/* 
 header {
   background: url("./images/title_background.jpg");
   height:80vw;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100%;
+  min-height:100vw;
+  
   }
 
 .cut-out-text {
@@ -48,9 +65,16 @@ header {
   width:128%;
   padding-top:30vw;
   padding-right:25vw;
-  margin-bottom:-15vw;
 }
 
+
+
+
+h1{
+  font: bold 26vw 'Futura';
+  display: flex;
+  justify-content:center;
+} */
 /* __________________________________________________________________________- */
 
 

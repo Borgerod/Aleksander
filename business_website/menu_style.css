@@ -49,10 +49,10 @@
   }
 
 .navbar {
-
-  /* background-color:#272727; */
   background:transparent;
-  display: flex;
+  /* background-color:#272727; */
+  /* background:transparent; */
+  /* display: flex; */
   
   /* padding: 2vw 0vw; */
   /* padding:2vw; */
