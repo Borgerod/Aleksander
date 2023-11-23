@@ -1,10 +1,14 @@
 
+:root {
+  background: #f2f2f2;
+}
+
 body, html {
   height: 100%;
   margin: 0;
   overflow-x: hidden;
 }
-/* __________________________________________________________________________- */
+
 
 body {
   font-family: Arial, sans-serif;
@@ -13,6 +17,9 @@ body {
   overflow-x:hidden;
   
 }
+
+
+/* ______________________________ HEADER _________________________________ */
 
 header{
   background-image: url("./images/title_background.jpg");
@@ -42,71 +49,6 @@ h1{
 
 }
 
-/* 
-header {
-  background: url("./images/title_background.jpg");
-  height:80vw;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height:100vw;
-  
-  }
-
-.cut-out-text {
-  background: url("./images/title_background_blurry.jpg");
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgb(77, 77, 77, 0.1);
-  margin:inherit;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  top:-10vw;
-  height:inherit;
-  width:128%;
-  padding-top:30vw;
-  padding-right:25vw;
-}
-
-
-
-
-h1{
-  font: bold 26vw 'Futura';
-  display: flex;
-  justify-content:center;
-} */
-/* __________________________________________________________________________- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-:root {
-  background: #f2f2f2;
-}
-
 h2{
   background-color: #565656;
   display: flex; 
@@ -120,8 +62,6 @@ h2{
   display: flex;
   justify-content:center;
 }
-
-
 
 h2a{
   color: rgba(144,131,114,255);
@@ -145,6 +85,9 @@ a {
 
 
 
+/* ______________________________ MAIN _________________________________ */
+
+
 main {
   height: 100%;
   display: flex;
@@ -154,6 +97,9 @@ main {
   /* padding: 10px; */
   /* margin: 2%; */
 }
+
+
+/* ______________________________ FOOTER _________________________________ */
 
 footer {
   display:flex;
@@ -179,26 +125,9 @@ FOOTER
   /* text-align: center; */
 }
 
-button {
-  margin:1rem;
-  padding:1rem 2rem;
-  background-color: transparent;
-  border: 1em;
-  outline: rgb(110, 106, 102) solid medium;
-  
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  /* margin: 4px 2px; */
-  cursor: pointer;
-}
 
-button:hover{
-  outline: #4CAF50 solid medium;
-}
 
+/* ______________________________ OTHER _________________________________ */
 
 .full_div{
   width: 100%;
@@ -211,9 +140,6 @@ button:hover{
 
 
 /* ---------------- TABLE ----------------  */
-
-
-
 
 .col {
   /* outline: red solid medium; */
@@ -245,8 +171,6 @@ button:hover{
 
   .row {
     background:transparent;
-    /* background-color: black; */
-    /* margin:1rem; */
     padding:0rem;
     justify-content: space-between;
     width: 100%;
@@ -277,7 +201,27 @@ button:hover{
         margin:1%;
         text-align: center;
     }
-
+    button {
+      margin:1rem;
+      padding:1rem 2rem;
+      background-color: transparent;
+      border: 1em;
+      outline: rgb(110, 106, 102) solid medium;
+      
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      /* margin: 4px 2px; */
+      cursor: pointer;
+    }
+    
+    button:hover{
+      outline: #4CAF50 solid medium;
+    }
+    
+    
 
 /* _____________________________ ID's _____________________________ */
     /* ---------------- TEXTS ----------------  */
