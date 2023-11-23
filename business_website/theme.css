@@ -14,8 +14,6 @@ body {
   font-family: Arial, sans-serif;
   background: linear-gradient(70deg, #7f766f, #272727); 
     /* TODO [ ]: make gradient reactive to background photo(s). */
-  background-image: url("./images/title_background_blurry.jpg");
-  backdrop-filter: blur(10px);
   color: #858585;
   overflow-x:hidden;
   
@@ -45,36 +43,49 @@ header{
   background-repeat: no-repeat;
   background-size: cover;
   max-height:100vh;
+}
 
-
-  /* background: yellow; */
-  
+header {
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    height: 100vh;
 }
 
 /* The semi-hidden header blurry header layer, which is clipped in the shape of the title */
 header-layer {
+
+  
   background-image: url("./images/title_background_blurry.jpg");
-  height:100vh;
-  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: rgb(77, 77, 77, 0.1);
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  /* background: red; */
 }
 
+header-subtitle-container{
+  position: absolute;
+  right:0;
+  bottom:0;
+  padding: 10px;
+}
 
 h1{
   font: bold 26vw 'Futura';  
-  /* background: #4CAF50; */
 }
 
+
+h2a{
+  color: rgba(144,131,114,255);
+  font-size:calc((30px + 5vw)/2);
+}
 
 
 
@@ -147,13 +158,6 @@ h2{
   background-clip: text;
   display: flex;
   justify-content:center;
-}
-
-h2a{
-  color: rgba(144,131,114,255);
-  font-size: 5vw;
-  display: flex;
-  justify-content:right;
 }
 
 h3{

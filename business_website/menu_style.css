@@ -49,19 +49,14 @@
   }
 
 .navbar {
+  padding: 20px;
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
   background:transparent;
-  /* background-color:#272727; */
-  /* background:transparent; */
-  /* display: flex; */
-  
-  /* padding: 2vw 0vw; */
-  /* padding:2vw; */
-  /* margin: auto; */
   display: flex; 
-  /* gap: 6vw; */
-  /* justify-content: space-around;  */
   justify-content: space-between; 
-  /* justify-content: space-evenly;  */
 }
 
 .nav-links {
