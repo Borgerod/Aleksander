@@ -1,5 +1,5 @@
 
-/* LOGO */
+/*! LOGO */
 .logo {
   display:flex;
   justify-content: center;
@@ -20,8 +20,10 @@
   /* min-width: 70px; */
   /* margin: 2 ; */
   }
+
   
-  
+
+  /*! DROPDOWN LIST */
   .services:hover .dropdown {
     display: block;
   }
@@ -31,6 +33,7 @@
     position: absolute;
     /* right: 9em; */
     list-style: none;
+    
     background-color: #191919;
     opacity: 80%;
     /* padding: 2rem; */
@@ -46,8 +49,10 @@
     /* width: 8em; */
     text-align: center;
     
+    
   }
 
+  /*! MENU BAR */
 .navbar {
   padding: 20px;
   position: absolute;
@@ -59,23 +64,35 @@
   justify-content: space-between; 
 }
 
+.nav-links a {
+  padding: 20px;
+  
+  /* display: block; */
+  text-decoration:none;
+}
+
 .nav-links {
   display: flex; 
   gap: 6vw;
+  font-size: 2vw;
+  /* text-decoration: none; */
+  text-decoration:none;
   /* justify-content: space-evenly;  */
   /* space-between; */
   
   
     list-style: none;
-    /* padding: 1vw; */
+    
+    /* padding: 1vw;
     /* margin: 2vw; */
     /* display: flex; */
     /* padding: auto 2vw; */
     /* align:top; */
     /* align-items:top; */
-}
+} */
 
 .nav-links li {
+  /* text-decoration: none; */
   display: flex; 
   /* gap: 6vw; */
   justify-content: space-around; 
@@ -89,9 +106,12 @@
 }
 
 .nav-links li:hover {
+  /* text-decoration: none; */
   background-color: red;
 }
 
+
+/*! HAMBURGER ICON */
 .hamburger {
     font-size: 24px;
 }
@@ -102,11 +122,12 @@
   visibility: hidden
 }
 
-
 #close-icon{
   visibility:hidden;
 }
 
+
+/*! FUNCION FOR DISPLAYING HAMBURGER MENU  */
 @media only screen and (max-width: 700px) {
     .navbar{
       padding:4vw;
@@ -168,3 +189,5 @@
     }
 
 }
+
+

@@ -10,13 +10,23 @@ body, html {
 }
 
 
+
+
 body {
+  visibility: visible;
   font-family: Arial, sans-serif;
   background: linear-gradient(70deg, #7f766f, #272727); 
     /* TODO [ ]: make gradient reactive to background photo(s). */
   color: #858585;
   overflow-x:hidden;
   
+}
+
+
+
+bodydarkmode{
+  background: transparent;
+  /* visibility:hidden; */
 }
 
 
@@ -46,6 +56,7 @@ header{
 }
 
 header {
+    position: relative;
     display: flex;
     flex-flow: column;
     align-items: stretch;
@@ -161,7 +172,15 @@ h2{
 }
 
 h3{
-  color:#9c8470;
+  /* color:#9c8470; */
+  display: flex; 
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  font-size: 26vw;
+  margin: 0 25%;
+  color: rgba(144,131,114,255);
+  font-size:calc((30px + 5vw)/2);
 }
 h4{
   font-size: 4vw;
