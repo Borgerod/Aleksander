@@ -32,7 +32,6 @@
     /* display: block; */
     position: absolute;
     /* right: 9em; */
-    list-style: none;
     
     background-color: #191919;
     opacity: 80%;
@@ -154,7 +153,6 @@
         right: 0;
         bottom: 0;
         background: black;
-        list-style: none;
         min-height: 103%;
         width: 100%;
     }

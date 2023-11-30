@@ -9,7 +9,9 @@ body, html {
   overflow-x: hidden;
 }
 
-
+*{
+  box-sizing: border-box;
+}
 
 
 body {
@@ -24,9 +26,13 @@ body {
 
 
 
-bodydarkmode{
+bodylightmode{
   background: transparent;
   /* visibility:hidden; */
+}
+
+li {
+  list-style: none;
 }
 
 
@@ -46,7 +52,7 @@ bodydarkmode{
 
 /* The visisible and back layer of the header, the header contains both nav-bar and title-page.*/
 header{
-  background-image: url("./images/title_background.jpg");
+  background-image: url("../images/title_background.jpg");
   display: flex;
   flex-direction:column;
   background-position: center;
@@ -67,7 +73,7 @@ header {
 header-layer {
 
   
-  background-image: url("./images/title_background_blurry.jpg");
+  background-image: url("../images/title_background_blurry.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -104,7 +110,8 @@ h2a{
 
 
 main {
-  height: 100%;
+  height: 100vh;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,42 +123,146 @@ main {
 
 /* ______________________________ FOOTER _________________________________ */
 
+
+
+
+
+/* 
+*{
+  box-sizing: border-box;
+}
+
+footer{
+  margin-top: 150px;
+  width: 100%;
+  padding: 100px 15%;
+  justify-content: space-between;
+  color:#efefef;
+  background:#333;
+  display: flex; 
+  width: 100%;
+  bottom: 0rem;
+  text-align: left;
+  position: flex;
+} */
+/* 
+footer div{
+  text-align: center;
+
+} */
+
+
+
+.footer{
+  padding:2vw 4vw;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: space-around;
+  background:#333;
+  display: flex; 
+}
+
+.footer div{
+  padding: 2vw;
+  text-align: center;
+}
+
+.footer div h3 {
+    font-weight: 300; 
+    letter-spacing: 1px ;
+    
+}
+
+.col-1 a{
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.col-1 a:hover{
+    color: #ee4141;
+}
+
+.col-2{
+  flex-grow: 2;
+  padding-bottom: 3vw;
+  display: flex;
+  flex-direction: column;
+}
+
+
+form input{
+    margin-bottom: 2vw;
+    width: 30vw;
+    height: 6vh;
+    border-radius: 4px;
+    text-align: center;
+    outline:none;
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
 footer {
   display:flex;
   background:black;
   width: 100%;
-  /* color: antiquewhite; */
   text-align: left;
-  /* margin: 0; */
   position: flex;
   bottom: 0rem;
-  width: 100%;
-  /* color: antiquewhite; */
-  /* text-align: center; */
+
 }
 
-FOOTER
 .footer_block {
   margin: 0;
   position: flex;
   bottom: 0rem;
   width: 100%;
-  /* color: antiquewhite; */
-  /* text-align: center; */
 }
 
-
-
-/* ______________________________ OTHER _________________________________ */
-
-.full_div{
-  width: 100%;
-  row-gap: 20px;
-  flex-direction: column;
-  align-items: center;  
-  display: flex;
-  flex-wrap: wrap;
+.footer-social-list{
+  padding: 20px;
+  background:transparent;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between; 
 }
+
+.footer-links {
+} 
+
+ */
 
 
 /* ---------------- FONTS ----------------  */
@@ -171,16 +282,25 @@ h2{
   justify-content:center;
 }
 
+
+h3.footer{
+  /* display: flex; */
+/* text-align: left;
+justify-content:left;
+align-items: left;
+font-size: 2vw; */
+}
+
 h3{
-  /* color:#9c8470; */
-  display: flex; 
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  font-size: 26vw;
-  margin: 0 25%;
-  color: rgba(144,131,114,255);
-  font-size:calc((30px + 5vw)/2);
+  color:#9c8470;
+  /* display: flex;  */
+  /* justify-content:center; */
+  /* align-items:center; */
+  /* text-align:center; */
+  /* font-size: 26vw; */
+  /* margin: 0 25%; */
+  /* color: rgba(144,131,114,255); */
+  /* font-size:calc((30px + 5vw)/2); */
 }
 h4{
   font-size: 4vw;
@@ -193,9 +313,24 @@ a {
 }
 
 
+/* ______________________________ OTHER _________________________________ */
+/* 
+.full_div{
+  padding: 3vw;
+  width: 100%;
+  row-gap: 20px;
+  flex-direction: column;
+  align-items: center;  
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+
+
 /* ---------------- TABLE ----------------  */
 
 .col {
+  padding: 3vw;
   /* outline: red solid medium; */
   row-gap: 20px;
   flex-direction: column;
@@ -205,13 +340,15 @@ a {
   /* margin:0rem; */
   /* padding:1rem; */
   outline: grey solid thin;
-  background:transparent
+  /* background:transparent */
+  background-color: #ee4141;
+  
 }
 
 @media screen and (min-width: 701px) {
   .row {
     
-    background:transparent;
+    /* background:transparent; */
     /* background-color: black; */
     display: flex;
     /* margin:1rem; */
@@ -224,7 +361,7 @@ a {
 @media screen and (max-width: 700px) {
 
   .row {
-    background:transparent;
+    /* background:transparent; */
     padding:0rem;
     justify-content: space-between;
     width: 100%;
@@ -232,54 +369,12 @@ a {
 }
 
 
-/* ---------------- BUTTONS ----------------  */
-    /*button specific attributes*/
-    .button1 {
-        background-color: rgb(43, 168, 226);
-    }
 
-    /*button specific attributes*/
-    .button2 {
-        background-color: rgb(43, 168, 226);
-    }
 
-    /*These are the shared attributes */
-    .button1, .button2 {
-        color: antiquewhite;
-        cursor: pointer;
-        background-repeat: no-repeat;
-        width: 150px;
-        height: 30px;
-        border: 0;
-        padding:1%;
-        margin:1%;
-        text-align: center;
-    }
-    button {
-      margin:1rem;
-      padding:1rem 2rem;
-      background-color: transparent;
-      border: 1em;
-      outline: rgb(110, 106, 102) solid medium;
-      
-      color: white;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      /* margin: 4px 2px; */
-      cursor: pointer;
-    }
-    
-    button:hover{
-      outline: #4CAF50 solid medium;
-    }
-    
-    
 
-/* _____________________________ ID's _____________________________ */
-    /* ---------------- TEXTS ----------------  */
-    #button{
-        text-align: center;
-        font-size: large;
-    }
+
+
+
+
+
+
