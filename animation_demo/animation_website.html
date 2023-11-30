@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/animation_demo/darkmode_button.css" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <link href="https://fonts.cdnfonts.com/css/horror" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <script> src="script.js" </script>
 </head>
 
@@ -49,27 +51,15 @@
     </header>
 
 <main> 
-    <button onclick="myFunction()"> darkmode </button>
+    
+    <darkmode-button-container>
+        <button class="iconbutton fa-solid fa-sun" onclick="getLightmode()"> </button>
+    </darkmode-button-container>
 
-    <button onclick="openFullscreen();">Open Video in Fullscreen Mode</button>
 
-    <button class="js-toggle-fullscreen-btn toggle-fullscreen-btn" aria-label="Enter fullscreen mode" hidden>
-        <svg class="toggle-fullscreen-svg" width="28" height="28" viewBox="-2 -2 28 28">
-            <g class="icon-fullscreen-enter">
-                <path d="M 2 9 v -7 h 7" />
-                <path d="M 22 9 v -7 h -7" />
-                <path d="M 22 15 v 7 h -7" />
-                <path d="M 2 15 v 7 h 7" />
-            </g>
-            
-            <g class="icon-fullscreen-leave">
-                <path d="M 24 17 h -7 v 7" />
-                <path d="M 0 17 h 7 v 7" />
-                <path d="M 0 7 h 7 v -7" />
-                <path d="M 24 7 h -7 v -7" />
-            </g>
-        </svg>
-    </button>
+
+
+    
 </main>
 
 
@@ -81,27 +71,21 @@
 
 
 </body>
-<bodydarkmode>
+<bodylightmode>
     what did you do..
     you never use lightmode..
-</bodydarkmode>
+</bodylightmode>
 </html>
 
 <script>
-function myFunction() {
+
+function getLightmode() {
+    
     let snd = new Audio("/business_website/audio/overthrone.mp3");
     snd.play();
     
     let element = document.body;
     element.classList.toggle("light-mode");
-   
-//    var header = document.body.header;
-//    header.classList.toggle("light-mode-header");
-
-//    newbody.classList.toggle("visible");
-    // let newbody = document.querySelector("bodydarkmode");
-    // newbody.visibility = "visible";
-
 
     let header = document.querySelector("header");
     let main = document.querySelector("main");
@@ -109,50 +93,34 @@ function myFunction() {
     header.style.display = "none";
     main.style.display = "none";
     footer.style.display = "none";
-
-    let title = document.querySelector("bodydarkmode");
+    
+    let title = document.querySelector("bodylightmode");
     title.style.display="block";
+    transition(element, snd);
+}
 
+function transition(element, snd){
+    setTimeout(function() { element.classList.toggle("dark-light-mode-transition") }, 5500);
+    setTimeout(function() {snd.pause()}, 9000);
+    setTimeout(function() {getDarkmode()}, 9000);
 
 }
-    // FULLSCREEN BUTTON
 
-    if(document.fullscreenEnabled || document.webkitFullscreenEnabled) {
-	const toggleBtn = document.querySelector('.js-toggle-fullscreen-btn');
 
-	const styleEl = document.createElement('link');
-	styleEl.setAttribute('rel', 'stylesheet');
-	styleEl.setAttribute('href', 'https://codepen.io/tiggr/pen/poJoLyW.css');
-	styleEl.addEventListener('load', function() {
-		toggleBtn.hidden = false;
-	});
-	document.head.appendChild(styleEl);
-	
-	toggleBtn.addEventListener('click', function() {
-		if(document.fullscreen) {
-			document.exitFullscreen();
-		} else if(document.webkitFullscreenElement) {
-			document.webkitCancelFullScreen()
-		} else if(document.documentElement.requestFullscreen) {
-			document.documentElement.requestFullscreen();
-		} else {
-			document.documentElement.webkitRequestFullScreen();
-		}
-	});
-	
-	document.addEventListener('fullscreenchange', handleFullscreen);
-	document.addEventListener('webkitfullscreenchange', handleFullscreen);
-	
-	
-	function handleFullscreen() {
-		if(document.fullscreen || document.webkitFullscreenElement) {
-			toggleBtn.classList.add('on');
-			toggleBtn.setAttribute('aria-label', 'Exit fullscreen mode');
-		} else {
-			toggleBtn.classList.remove('on');
-			toggleBtn.setAttribute('aria-label', 'Enter fullscreen mode');
-		}
-	}
+function getDarkmode(){
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+    let header = document.querySelector("header");
+    let main = document.querySelector("main");
+    let footer = document.querySelector("footer");
+    header.style.display = "block";
+    main.style.display = "block";
+    footer.style.display = "block";
+    let title = document.querySelector("bodylightmode");
+    title.style.display="none";
 }
+
+
+
 
 </script>
