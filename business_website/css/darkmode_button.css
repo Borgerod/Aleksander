@@ -1,0 +1,36 @@
+/* Base button in buttons.css; iconbutton */
+
+darkmode-button-container{
+    position: absolute;
+    padding: 3vh 5vw;
+    bottom: 0;
+    right: 0;  
+}
+
+.light-mode {
+  background: url("/business_website/images/smile.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Horror';
+  color:rgb(80, 0, 0);
+  font-size: xx-large;
+}
+
+
+.dark-light-mode-transition{
+  background: url("/business_website/images/glitch.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.dark-mode{
+  background: linear-gradient(70deg, #7f766f, #272727); 
+  font-family: Arial;
+  overflow-x:hidden;
+  color: #858585;
+  font-size:medium;
+}
+
