@@ -1,3 +1,12 @@
+<!-- 
+
+    TODO: 
+    - [ ] Logo has issues with padding
+    - [ ] "I AM THE RIG>HT> SIDE" overflows into footer
+    - [ ] lightmode message still shows before lightmode and is not shown during transition
+ -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +15,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>MUO Limited</title>
     <link rel="icon" type="image/x-icon" href="media/images/B_logo.png">
-    <link rel="stylesheet" href="theme.css" type="text/css">
-    <link rel="stylesheet" href="menu_style.css" type="text/css">
-    <link rel="stylesheet" href="buttons.css" type="text/css">
+
+    <link rel="stylesheet" href="./css/theme.css" type="text/css">
+    <link rel="stylesheet" href="./css/menu_style.css" type="text/css">
+    <link rel="stylesheet" href="./css/darkmode_button.css" type="text/css">
+    <link rel="stylesheet" href="./css/buttons.css" type="text/css">
+
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/horror" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/bb2433f669.js" crossorigin="anonymous"></script>
+
     <script> src="script.js" </script>
 </head>
 
 <body>
-    
+    <!-- LANDING PAGE -->
     <header>  
 
         <navbar-layer> 
@@ -44,10 +64,6 @@
         </navbar-layer>
 
         <header-layer><h1> BEHOLD </h1></header-layer>
-        <!-- <header-layer>
-            <h1> BEHOLD </h1> 
-            <h2a> A bunch of Lorem Ipsum </h2a>
-        </header-layer> -->
         
         <header-subtitle-container>
             <h2a> A bunch of Lorem Ipsum </h2a>
@@ -56,32 +72,14 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    
-        <!-- LANDING PAGE -->
-        <!-- </landingpage> -->
-    
-
     <!-- MAIN CONTENT -->
     <main class="main_block">
+    
 
-        <text x="-50" y="60vw" font-family="Arial, sans serif"  font-size="10vw" font-weight="800">
-            This text
-            <text  x="-50" y="60vw" font-family="Arial, sans serif"  font-size="30vw" font-weight="200">
-                is 
-            </text> 
-            important!
-        </text>
+
+        <div class="full-div"></div>
+
+        <!-- 
         <div class="full_div">
             <h3>I AM THE UPPER DIV</h3>
             <p>Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.</p>
@@ -91,31 +89,130 @@
             <div class="col">
                 <h3>I AM THE LEFT SIDE</h3>
                 <p>Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.</p>
-                <button type="button">Click Me!</button>
+                <button class="default" type="button">Click Me!</button>
             </div>
             <div class="col">
                 <h3>I AM THE RIGHT SIDE</h3>
                 <p>Lorem Ipsum er rett og slett dummytekst fra og for trykkeindustrien. Lorem Ipsum har vært bransjens standard for dummytekst helt siden 1500-tallet, da en ukjent boktrykker stokket en mengde bokstaver for å lage et prøveeksemplar av en bok. Lorem Ipsum har tålt tidens tann usedvanlig godt, og har i tillegg til å bestå gjennom fem århundrer også tålt spranget over til elektronisk typografi uten vesentlige endringer. Lorem Ipsum ble gjort allment kjent i 1960-årene ved lanseringen av Letraset-ark med avsnitt fra Lorem Ipsum, og senere med sideombrekkingsprogrammet Aldus PageMaker som tok i bruk nettopp Lorem Ipsum for dummytekst.</p>
             </div>
-        </div>
+        </div> -->
 
-</main>
+        <darkmode-button-container>
+            <button class="iconbutton fa-solid fa-sun" onclick="getLightmode()"> </button>
+        </darkmode-button-container>
+        
+    </main>
 
+    <!-- ALTERNATIV MAIN FOR LIGHTODE -->
+    <bodylightmode>
+        what did you do..
+        you never use lightmode..
+    </bodylightmode>
+    
 <!-- FOOTER -->
-<footer>
+<div class="footer">
+
+    <div class="col-1">
+        <h3 class="footer"> USEFUL LINKS</h3>
+        <a href=""> About </a>
+        <a href=""> Services </a>
+        <a href=""> Contact </a>
+        <a href=""> Shop </a>
+        <a href=""> Blog </a>
+    </div>
+    <div class="col-2">
+
+        <h3 class="footer"> NEWSLETTER</h3>
+        <form>
+            <input type="text" placeholder="Your Email Address" required>
+            <br>
+            <button type="submit">SUBSCRIBE</button>
+        </form>
+    </div>
+    <div class="col-3">
+        <h3 class="footer">CONTACT</h3>
+        <p>123, XYV Road, BSK 3 <br> Bangalore, karantaka, IN </p>
+        <div class="social-icons">
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
+            <i class="fa-solid fa-envelope"></i>
+            <i class="fa-solid fa-phone"></i>
+        </div>
+    </div>
+</div>
+<!-- <footer>
     <div class="footer_block">
         <h4>Don't look at me</h4>
-        <p>I am just a stinky footer.</p>
+        I am just a stinky footer.
+        <div>
+            <ul class="footer-social-list">
+                <li> <button class="footer-links iconbutton fa-brands fa-facebook-f"></button></li>
+                <li> <button class="footer-links iconbutton fa-brands fa-instagram"></button></li>
+                <li> <button class="footer-links iconbutton fa-brands fa-linkedin-in"></button></li>
+                <li> <button class="footer-links iconbutton fa-solid fa-envelope"></button></li>
+                <li> <button class="footer-links iconbutton fa-solid fa-phone"></button></li>        
+            </ul>
+        </div>
     </div>
-</footer>
+</footer> -->
 </body>
+
+
+
 <script>
+let title = document.querySelector("bodylightmode");
+title.style.display="none";
 
 function changeIcon(anchor) {
   var icon = anchor.querySelector("i");
   const navLinks = document.querySelector('.nav-links');
   navLinks = icon.classList.contains('fa-bars') ? navLinks.classList.add('active') : navLinks.classList.remove('active');
 }
+
+function getLightmode() {
+    let snd = new Audio("/business_website/audio/overthrone.mp3");
+    snd.play();
+    
+    let element = document.body;
+    element.classList.toggle("light-mode");
+    
+    let title = document.querySelector("bodylightmode");
+    title.style.display="block";
+    
+    let header = document.querySelector("header");
+    let main = document.querySelector("main");
+    let footer = document.querySelector("footer");
+    header.style.display = "none";
+    main.style.display = "none";
+    footer.style.display = "none";
+    
+
+    transition(element, snd);
+}
+
+function transition(element, snd){
+    setTimeout(function() { element.classList.toggle("dark-light-mode-transition") }, 5500);
+    setTimeout(function() {snd.pause()}, 9000);
+    setTimeout(function() {getDarkmode()}, 9000);
+}
+
+function getDarkmode(){
+    let element = document.body;
+    element.classList.toggle("dark-mode");
+    let header = document.querySelector("header");
+    let main = document.querySelector("main");
+    let footer = document.querySelector("footer");
+    header.style.display = "block";
+    main.style.display = "block";
+    footer.style.display = "block";
+    let title = document.querySelector("bodylightmode");
+    title.style.display="none";
+}
+
+
+
 
 </script>
 </html>
