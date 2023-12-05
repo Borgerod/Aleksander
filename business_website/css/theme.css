@@ -51,8 +51,13 @@ li {
 
 
 /* The visisible and back layer of the header, the header contains both nav-bar and title-page.*/
-header{
-  background-image: url("../images/title_background.jpg");
+.header_background{
+  background:  url("../images/title_background.jpg");
+}
+header img{
+  background:  url("../images/title_background.jpg");
+
+  /* background-image: url("../images/title_background.jpg"); */
   display: flex;
   flex-direction:column;
   background-position: center;

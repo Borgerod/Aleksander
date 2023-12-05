@@ -29,14 +29,16 @@
 
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/bb2433f669.js" crossorigin="anonymous"></script>
-
-    <script> src="script.js" </script>
+    
+    <!-- <script> src="script.js" </script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
+    <script src="fluid_background.js" >  </script>
 </head>
 
 <body>
     <!-- LANDING PAGE -->
-    <header>  
-
+    <!-- <header class="header_background">   -->
+    <header id="header">
         <navbar-layer> 
             <nav class="navbar">
                 <div class="logo">MUO</div>
@@ -110,8 +112,8 @@
     </bodylightmode>
     
 <!-- FOOTER -->
-<div class="footer">
-
+<footer class ="footer">
+    
     <div class="col-1">
         <h3 class="footer"> USEFUL LINKS</h3>
         <a href=""> About </a>
@@ -121,7 +123,7 @@
         <a href=""> Blog </a>
     </div>
     <div class="col-2">
-
+        
         <h3 class="footer"> NEWSLETTER</h3>
         <form>
             <input type="text" placeholder="Your Email Address" required>
@@ -141,22 +143,7 @@
             <i class="fa-solid fa-phone"></i>
         </div>
     </div>
-</div>
-<!-- <footer>
-    <div class="footer_block">
-        <h4>Don't look at me</h4>
-        I am just a stinky footer.
-        <div>
-            <ul class="footer-social-list">
-                <li> <button class="footer-links iconbutton fa-brands fa-facebook-f"></button></li>
-                <li> <button class="footer-links iconbutton fa-brands fa-instagram"></button></li>
-                <li> <button class="footer-links iconbutton fa-brands fa-linkedin-in"></button></li>
-                <li> <button class="footer-links iconbutton fa-solid fa-envelope"></button></li>
-                <li> <button class="footer-links iconbutton fa-solid fa-phone"></button></li>        
-            </ul>
-        </div>
-    </div>
-</footer> -->
+</footer>
 </body>
 
 
@@ -180,7 +167,6 @@ function getLightmode() {
     
     let title = document.querySelector("bodylightmode");
     title.style.display="block";
-    
     let header = document.querySelector("header");
     let main = document.querySelector("main");
     let footer = document.querySelector("footer");
