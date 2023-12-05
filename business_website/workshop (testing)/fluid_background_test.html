@@ -1,4 +1,5 @@
-
+<!-- FLUID BACKGROUND COLOR  -->
+<!-- CHANGES BACKGROUND GRADIENT BASED ON PICTURES POSTED ON WEBSITE -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +27,7 @@
         height: 50px;
         overflow: hidden;
         /* background: blue; */
-        background: url("images/title_background.jpg");
+        background: url("../images/title_background.jpg");
         /* background: linear-gradient(70deg, #7f766f, #272727);  */
        
     }
@@ -55,7 +56,7 @@
     <header>
         HELLO
     </header>
-    <img id="top-bar" src="images/title_background.jpg">
+    <img id="top-bar" src="../images/title_background.jpg">
         Text
     </section>
     <section id="header">
@@ -71,12 +72,32 @@
         
     </mydiv>
     
-    <img id="i" src="images/title_background.jpg" />
+    <img id="i" src="../images/title_background.jpg" />
 </body>
+
 </html>
 
 
 <script>
+
+// Hei!
+// I denne oppgaven vil vi at dere skal sette opp noe generisk HTML og CSS som kan gjenbrukes i andre filer og prosjekter dere måtte ha i fremtiden. De fleste nettsider har de samme byggesteinene, så å ha noe template ferdig og klar til bruk kan hjelpe oss på vei til å bli gode utviklere. Det vil også minimere tid vi bruker på å skrive kode, om vi har noe som er ferdiglaget som kan limes inn i fremtidige prosjekter.
+
+// CSS biblioteker:
+// Vi har flere bibliotek som kan gjøre dette for oss, som tailwind og bootstrap, som enkelt kan gi oss styling til nettsidene våres med å skrive inn klasse navn som allerede har styling på seg. Det som vi gjør nå er at vi lager våre egne bibliotek, med at vi setter opp globale CSS klasser som kan taes på bruk på flere elementer for å sette styling på elementer. 
+
+// Globale CSS klasser:
+// Grunnen til at vi lager globale CSS klasser er for å minimere mengde kode vi skriver i filene våres, som for eksempel å lage spesifikke klasser til flex row og flex column, for det er en plasserings metode som vi bruker gjennom hele koden og fort kan bli noe som repeteres. Da er det mye enklere å bare ha en klasse selekter som er for flex column for eksempel og gjenbruke den, enn å skrive to linjer med kode på hvert element du ønsker skal ha denne plasseringen.
+
+// Oppgave krav:
+// Sett opp CSS variabler til farger
+// Sett opp CSS variabler til font-familier
+// Sett opp CSS variabler til CSS properties du bruker mye (for eksempel: flex, padding, font-size, osv)
+// Sett opp CSS klasser til generelle elementer (header, main, footer, section, etc), som gjerne igjen tar i bruk CSS variabler du har satt opp.
+// Lag en nettside med hjelp av ditt nye bibliotek
+// Oppgave innlevering:
+// Github repository link
+// Publisert netlify nettside link
 
 
 var rgb = getAverageRGB(document.getElementById('top-bar'));
