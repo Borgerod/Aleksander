@@ -1,0 +1,107 @@
+_____________________ PROGRAMING 101 _____________________
+
+Bit: 0 or 1 
+Bolean: true or false => 0 or 1 
+
+
+
+======= NUMBERS ====================================================================================
+
+____ INTERGER ____
+(whole numbers)
+    10 char    |       2 char  [ x char as in the range of unique characters ]
+    -------------------------
+    0          =       0 
+    1          =       1 
+    2          =       10 
+    3          =       11 
+    4          =       100 
+    5          =       101 
+    6          =       110 
+    7          =       111 
+    8          =       1000 
+    9          =       1001  
+
+
+
+
+
+_____ FLOATS  _____
+(float-point arithmetic) uses scientic notation, aka exponents to create the floating nubmer.  
+12.345 = 12345 * 10^-3
+
+FLOAT NUMBERS
+    10 char    |       factor equation  [ x char as in the range of unique characters ]
+    -------------------------
+    0          =       0 
+    1          =       1 
+    2          =       10 
+    3          =       11 
+    4          =       100 
+    5          =       101 
+    6          =       110 
+    7          =       111 
+    8          =       1000 
+    9          =       1001  
+
+
+
+======= LETTERS ====================================================================================
+
+____ SINGLE CHARS ____
+    A       =       0 
+    B       =       1 
+    C       =       10
+    D       =       11
+
+
+____ TEXT STRINGS ____
+    AA      =       0  0   
+    AB      =       0  1   
+    CB      =       10 1  
+    DC      =       11 10  
+
+======= BIGINT ====================================================================================
+extremely big numbers
+
+extreme numbers ranges from (in JS) 9,007,199,254,740,991 or 253 – 1 and -9,007,199,254,740,991 or -(253 – 1)
+[in SQL storage: (8 bytes), range: -9223372036854775808 to 9223372036854775807]
+
+
+
+
+
+________________ 64 bit visualisation of numbers ________________ 
+
+64 bit comes from: 
+1 bit: 
+byte: 
+one bit:            0 or 1  -> 1 boolean
+one byte:           00000000 -> 8 bits
+one "character":    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 -> 8 bytes 
+
+
+-1              =    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000011 
+0               =    10000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000 
+1               =    10000000 00000000 00000000 00000000 00000000 00000000 00000000 00000001 
+2               =    10000000 00000000 00000000 00000000 00000000 00000000 00000000 00000010 
+3               =    10000000 00000000 00000000 00000000 00000000 00000000 00000000 00000011 
+stort tall      =    11111111 11111111 11111111 11111111 11111111 11111111 11111111 11111111   
+stort tall +1   =    00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+
+
+" 
+thoguht:
+    Since "00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000" is not assigned to anything, 
+    then it seems like "00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000" is supposed to be a stopping point, 
+    or designated value for when a big number overflows its byte. AKA an "ERROR" point.
+    So, when a byte passes the value "00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000":
+        --> return "Error"
+"
+
+sign    |  exponent     |        fraction
+(1 bit) | (11 bits)     |        (52 bits)
+     XYYYYYYY YYYZZZZZ ZZZZZZZZ ZZZZZZZZ ZZZZZZZZ ZZZZZZZZ ZZZZZZZZ ZZZZZZZZ 
+
+
+
