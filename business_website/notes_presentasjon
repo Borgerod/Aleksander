@@ -1,0 +1,9 @@
+fortsetter; DOM manipulasjon
+
+DOM MANIPULATION: the process of interacting with the DOM API to change or modify an HTML document that will be displayed in a web browser.
+DOM API: Document Object Model (DOM) connects web pages to scripts or programming languages by representing the structure of a document—such as the HTML representing a web page—in memory.
+	aka. bruker javascript til å endre på html-/css- strukturen. 
+	f.eks.: 
+		- document.querySelector()
+
+- unit converter
