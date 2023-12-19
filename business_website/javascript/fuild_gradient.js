@@ -17,8 +17,8 @@ window.onload = () =>{
         const brightestColor = getBrightestPaletteColor(colorThief.getPalette(backgroundImage));
     
         // get element you want to change background color 
-        let outputSection = document.getElementById('color-output-section');
-    
+        let outputSection = document.querySelector("body");
+        
         // set the new gradient background 
         outputSection.style.setProperty('background', 'linear-gradient(70deg, ' + 'rgb(' + brightestColor + ')'+ ',' + 'rgb(' + dominantColor + ')'+ ')', 'important');
     }
