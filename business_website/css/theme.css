@@ -17,17 +17,22 @@ body, html {
 body {
   visibility: visible;
   font-family: Arial, sans-serif;
-  background: linear-gradient(70deg, #7f766f, #272727); 
-    /* TODO [ ]: make gradient reactive to background photo(s). */
+  /* background: linear-gradient(70deg, #7f766f, #272727);  */
+  background: black;
+  /* TODO [ ]: make gradient reactive to background photo(s). */
   color: #858585;
-  overflow-x:hidden;
-  
+  overflow-x: hidden;
 }
 
 
 
 bodylightmode{
+  /* height: 100%;
+  width: 100%; */
   background: transparent;
+  /* background:black; */
+  /* background-image:  */
+  /* background-image: url("../media/images/smile.jpg"); */
   /* visibility:hidden; */
 }
 
@@ -52,12 +57,13 @@ li {
 
 /* The visisible and back layer of the header, the header contains both nav-bar and title-page.*/
 .header_background{
-  background:  url("../images/title_background.jpg");
+  background:  url("../media/images/title_background.jpg");
+  
 }
 header img{
-  background:  url("../images/title_background.jpg");
+  background:  url("../media/images/title_background.jpg");
 
-  /* background-image: url("../images/title_background.jpg"); */
+  /* background-image: url("../media/images/title_background.jpg"); */
   display: flex;
   flex-direction:column;
   background-position: center;
@@ -67,6 +73,15 @@ header img{
 }
 
 header {
+  background:  url("../media/images/title_background.jpg");
+
+  /* background-image: url("../media/images/title_background.jpg"); */
+  display: flex;
+  flex-direction:column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-height:100vh;
     position: relative;
     display: flex;
     flex-flow: column;
@@ -76,9 +91,7 @@ header {
 
 /* The semi-hidden header blurry header layer, which is clipped in the shape of the title */
 header-layer {
-
-  
-  background-image: url("../images/title_background_blurry.jpg");
+  background-image: url("../media/images/title_background_blurry.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

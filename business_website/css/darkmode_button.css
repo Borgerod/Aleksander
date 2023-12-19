@@ -7,30 +7,31 @@ darkmode-button-container{
     right: 0;  
 }
 
-.light-mode {
-  background: url("/business_website/images/smile.jpg");
+.lightmodeOverlay{
+  background: url("../media/images/smile.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Horror';
-  color:rgb(80, 0, 0);
-  font-size: xx-large;
+  color:rgb(99, 0, 0);
+  text-align: center;
+  line-height: 500px;
+  font-size: xxx-large;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  overflow-x: hidden;
 }
 
-
 .dark-light-mode-transition{
-  background: url("/business_website/images/glitch.jpg");
+  background: url("../media/images/glitch.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
-}
-
-.dark-mode{
-  background: linear-gradient(70deg, #7f766f, #272727); 
-  font-family: Arial;
-  overflow-x:hidden;
-  color: #858585;
-  font-size:medium;
 }
 
