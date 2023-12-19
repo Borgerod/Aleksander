@@ -42,10 +42,6 @@ header{
     object-fit: cover;
 }
 
-mydiv{
-    background: inherit;
-}
-
 #color-output-section{
     width: 100vw;
     height: 100vh;
@@ -66,7 +62,6 @@ mydiv{
 
     <color-output-section id="color-output-section">
     </color-output-section>
-    
 
 </body>
 
@@ -93,14 +88,11 @@ getGradient = () => {
     // get brightest color 
     const brightestColor = getBrightestPaletteColor(colorThief.getPalette(backgroundImage));
 
-
-    // // Set the text color in the header based on the dominant color
-    // header.style.color = `rgb(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]})`;
-    
+    // get element you want to change background color 
     let outputSection = document.getElementById('color-output-section');
 
+    // set the new gradient background 
     outputSection.style.setProperty('background', 'linear-gradient(70deg, ' + 'rgb(' + brightestColor + ')'+ ',' + 'rgb(' + dominantColor + ')'+ ')', 'important');
-    console.log(dominantColor)
 }
 
 getGradient();
@@ -121,7 +113,5 @@ function getBrightestPaletteColor(arrays) {
     indices.sort((a, b) => sums[b] - sums[a]);
 
     // Use the index of the highest sum to get the corresponding array
-    return arrays[indices[0]];
-    console.log(arrays[indices[0]]);
-}
+    return arrays[indices[0]];}
 </script>
