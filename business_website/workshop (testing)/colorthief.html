@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="index.css"> -->
     <title>Dominant color tutorial</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
 </head>
@@ -22,13 +21,16 @@ header{
     background-color: #000;
 }
 
-.background{
+.section-background{
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: '';
 }
+
+
 .image-container{
     width:40vw;
     height: 60vh;
@@ -44,26 +46,28 @@ mydiv{
     background: inherit;
 }
 
+#color-output-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; 
+}
+
+
 </style>
 
 
 <body>
 
     <header id="header">
-        
     </header>
-    <!-- <section>
-        <img id="image-container" src="../images/title_background.jpg" alt="mordi">
-    </section> -->
-    
-    <section class="background">
-    </section>
 
-    <section>
-        <mydiv>
-            hello 
-        </mydiv>
-    </section>
+    <color-output-section id="color-output-section">
+    </color-output-section>
+    
+
 </body>
 
 
@@ -74,30 +78,8 @@ mydiv{
 window.onload = () =>{
 
 getGradient = () => {
-  // Get the header element and the background image
-    const header = document.getElementById('header');
-    const backgroundImage = new Image();
-    backgroundImage.src = getComputedStyle(header).backgroundImage.slice(4, -1).replace(/"/g, ""); // Get the URL of the background image
-
-    // Create a ColorThief instance
-    const colorThief = new ColorThief();
-
-    // Use the ColorThief instance to get the dominant color
-    const dominantColor = colorThief.getColor(backgroundImage);
-
-// Get the brightest color 
-const brightestColor = getBrightestPaletteColor(colorThief.getPalette(backgroundImage));
-// set the background color
-let background = document.querySelector(".background");
-background.style.setProperty('background', 'linear-gradient(70deg, ' + 'rgb(' + brightestColor + ')'+ ',' + 'rgb(' + dominantColor + ')'+ ')', 'important');
-}
-getGradient();
-
-}
-
-// Wait for the DOM to be ready
-window.onload = function() {
     // Get the header element and the background image
+   
     const header = document.getElementById('header');
     const backgroundImage = new Image();
     backgroundImage.src = getComputedStyle(header).backgroundImage.slice(4, -1).replace(/"/g, ""); // Get the URL of the background image
@@ -107,55 +89,22 @@ window.onload = function() {
 
     // Use the ColorThief instance to get the dominant color
     const dominantColor = colorThief.getColor(backgroundImage);
-
-    // Set the text color in the header based on the dominant color
-    header.style.color = `rgb(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]})`;
-};
-
-// window.onload = () =>{
+    
+    // get brightest color 
+    const brightestColor = getBrightestPaletteColor(colorThief.getPalette(backgroundImage));
 
 
-//     getGradient = () => {
-// //         var colorThief = new ColorThief();
-// // $(document).ready(function($) {
-// //     $(".box img").load(function(){
-// //          var dominantColor = colorThief.getColor($(this));
-// //          console.log(dominantColor);
-// //          $(this).parent().css("background-color", "rgb("+dominantColor+")");
-// //     });
-// // });
-// let sourceImage = document.querySelector("header");
-// // let sourceImage = document.querySelector("header");
-//         // let header = document.querySelector("header");
-//         // const sourceImage = document.getElementById("backgroundImage")
-//         // // let _sourceImage = window.getComputedStyle(header).getPropertyValue("background");
-//         // // let sourceImage = getComputedStyle(header).backgroundImage;
-//         // const sourceImage = document.querySelector("header");
-//         // const palette = colorThief.getPalette(headerImage);
-//                 // let sourceImage = document.querySelector("header").getPropertyValue("background");
-//         // console.log(_sourceImage)
-//         // get the image
-//         // let sourceImage = document.querySelector("img");
-//         // let sourceImage = document.getElement("header");
-//         console.log(sourceImage)
-//         // get the background element
-//         let background = document.querySelector(".background");
-//         // initialize colorThief
-//         const colorThief = new ColorThief();
-//         // let colorThief = new ColorThief();
+    // // Set the text color in the header based on the dominant color
+    // header.style.color = `rgb(${dominantColor[0]}, ${dominantColor[1]}, ${dominantColor[2]})`;
+    
+    let outputSection = document.getElementById('color-output-section');
 
-//         // get the dominant color 
-//         const color = colorThief.getColor(sourceImage);
-//         // Get the brightest color 
-//         const brightestColor = getBrightestPaletteColor(colorThief.getPalette(sourceImage));
-//         // set the background color
-//         background.style.setProperty('background', 'linear-gradient(70deg, ' + 'rgb(' + brightestColor + ')'+ ',' + 'rgb(' + color + ')'+ ')', 'important');
-//         }
-//         getGradient();
-// }
+    outputSection.style.setProperty('background', 'linear-gradient(70deg, ' + 'rgb(' + brightestColor + ')'+ ',' + 'rgb(' + dominantColor + ')'+ ')', 'important');
+    console.log(dominantColor)
+}
 
-
-
+getGradient();
+}
 
 function getBrightestPaletteColor(arrays) {
     // due to how rgb works; the higher the values the brighter the color, 
@@ -173,5 +122,6 @@ function getBrightestPaletteColor(arrays) {
 
     // Use the index of the highest sum to get the corresponding array
     return arrays[indices[0]];
+    console.log(arrays[indices[0]]);
 }
 </script>
