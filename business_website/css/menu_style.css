@@ -4,21 +4,12 @@
   display:flex;
   justify-content: center;
   font-size: 2vw;
-  /* font-size: 200%; */
   background:#191919;
 
   text-align: center;
   align-items: center;
-
-  /* padding: 2.5vw 0vw; */
-  /* margin: 2 auto; */
-
   height: 7vw;
   width: 9vw;
-
-  /* min-height: 40px; */
-  /* min-width: 70px; */
-  /* margin: 2 ; */
   }
 
   
@@ -29,23 +20,14 @@
   }
     
   .dropdown {
-    /* display: block; */
-    position: absolute;
-    /* right: 9em; */
-    
+    position: absolute;    
     background-color: #191919;
     opacity: 80%;
-    /* padding: 2rem; */
-    /* margin: 0.5rem 2rem; */
     display: none;
-    /* gap:2vw; */
     
   }
   
   .dropdown li {
-    /* padding: 2vw 2vw; */
-    /* padding:0.5em 50%; */
-    /* width: 8em; */
     text-align: center;
     
     
@@ -66,7 +48,6 @@
 .nav-links a {
   padding: 20px;
   
-  /* display: block; */
   text-decoration:none;
 }
 
@@ -74,38 +55,19 @@
   display: flex; 
   gap: 6vw;
   font-size: 2vw;
-  /* text-decoration: none; */
-  text-decoration:none;
-  /* justify-content: space-evenly;  */
-  /* space-between; */
-  
-  
-    list-style: none;
-    
-    /* padding: 1vw;
-    /* margin: 2vw; */
-    /* display: flex; */
-    /* padding: auto 2vw; */
-    /* align:top; */
-    /* align-items:top; */
-} */
+  text-decoration:none;  
+  list-style: none;
+}
 
 .nav-links li {
-  /* text-decoration: none; */
   display: flex; 
-  /* gap: 6vw; */
   justify-content: space-around; 
-  
-  /* margin: 10px 10px; */
-  /* margin: auto 1vw; */
-  /* padding: 1vw 1vw; */
   text-align: center;
   align: top;
   
 }
 
 .nav-links li:hover {
-  /* text-decoration: none; */
   background-color: red;
 }
 
@@ -162,22 +124,14 @@
     }      
     
     .nav-links li {
-        /* margin: 20px 20px; */
     }
 
     .hamburger {
       display:flex;
       justify-content: center;
-
-      /* position: fixed; */
-      /* z-index: 100; */
-      /* top: 2.5rem; */
-      /* right: 2.5rem; */
-      /* padding: 4px; */
     }
     #close-icon{
       visibility:visible;
-      /* margin:20% 20%; */
       display:flex;
       justify-content: right;
 
