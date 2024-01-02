@@ -53,25 +53,22 @@
                     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" /> 
                     <a onclick="changeIcon(this)"><i id= "menu-icon" class="hamburger fa-solid fa-bars"></i></a>
                     <ul class="nav-links">
-                        <i  id= "close-icon" class="close fa-solid fa-xmark"></i>
+                        <i  id= "close-icon" onclick = closeButton() class="close fa-solid fa-xmark"></i>
+                        <!-- <button id="close-icon"type="button" class="btn-close btn-close-white" aria-label="Close"></button> -->
+
                         <i class="spacer"></i>
                         <li><a href="/">Home</a></li>
-
-
-                        
                         <li><a href="/">About</a></li>
 
-                        <li class="services">
-                            <a href="/">Services</a>
+
+                        <li class="services"><a href="/">Services</a>
                             <ul class="dropdown">
                                 <li><a href="/">Dropdown 1</a></li>
                                 <li><a href="/">Dropdown 2</a></li>
                                 <li><a href="/">Dropdown 3</a></li>
                                 <li><a href="/">Dropdown 4</a></li>
-                            </ul>
+                            </ul> 
                         </li>
-
-
 
 
                         
@@ -166,9 +163,19 @@
 
 // change menu icon
 function changeIcon(anchor) {
-    var icon = anchor.querySelector("i");
+    let icon = anchor.querySelector("i");
     const navLinks = document.querySelector('.nav-links');
     navLinks = icon.classList.contains('fa-bars') ? navLinks.classList.add('active') : navLinks.classList.remove('active');
+}
+
+
+function closeButton(){
+    let navLinks = document.getElementsByClassName('nav-links');
+    // x.style.display = "none";
+    // navLinks.style.transform('-3%');
+    // transform: translateY(-3%);
+    // transform: translateY(-3%);
+    // close.onclick()
 }
     
 </script>
