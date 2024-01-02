@@ -53,7 +53,9 @@
                     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" /> 
                     <a onclick="changeIcon(this)"><i id= "menu-icon" class="hamburger fa-solid fa-bars"></i></a>
                     <ul class="nav-links">
-                        <i  id= "close-icon" onclick = closeButton() class="close fa-solid fa-xmark"></i>
+                        <a onclick="changeIcon(this)"><i  id="close-icon" class="close fa-solid fa-xmark"></i></a>
+
+                        <!-- <i  id= "close-icon" onclick = closeButton() class="close fa-solid fa-xmark"></i> -->
                         <!-- <button id="close-icon"type="button" class="btn-close btn-close-white" aria-label="Close"></button> -->
 
                         <i class="spacer"></i>
@@ -119,10 +121,7 @@
     </main>
 
     <!-- ALTERNATIV MAIN FOR LIGHTODE -->
-    <bodylightmode class="lightmodeOverlay">
-        <!-- what did you do.. -->
-        <!-- you never use lightmode.. -->
-    </bodylightmode>
+    <bodylightmode class="lightmodeOverlay"></bodylightmode>
     
 <!-- FOOTER -->
 <footer class ="footer">
@@ -161,21 +160,20 @@
 
 <script>
 
-// change menu icon
+// Burger menu Icon
 function changeIcon(anchor) {
-    let icon = anchor.querySelector("i");
+    let burger_icon = anchor.querySelector("i");
     const navLinks = document.querySelector('.nav-links');
-    navLinks = icon.classList.contains('fa-bars') ? navLinks.classList.add('active') : navLinks.classList.remove('active');
+    // adds "active" to .nav-links 
+    burger_icon.classList.contains('fa-bars') ? navLinks.classList.add('active') : navLinks.classList.remove('active');
 }
 
-
-function closeButton(){
-    let navLinks = document.getElementsByClassName('nav-links');
-    // x.style.display = "none";
-    // navLinks.style.transform('-3%');
-    // transform: translateY(-3%);
-    // transform: translateY(-3%);
-    // close.onclick()
+// Burger menu close icon
+function closeButton(anchor){
+    let close_icon = anchor.querySelector("i");
+    const navLinks = document.querySelector('.nav-links');
+    // removes "active" from .nav-links 
+    close_icon.classList.contains('fa-bars') ? navLinks.classList.remove('active') : navLinks.classList.add('active');
 }
     
 </script>
