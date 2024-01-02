@@ -24,23 +24,22 @@ body {
   overflow-x: hidden;
 }
 
-
 li {
   list-style: none;
 }
 
+a {
+  font-family: Arial, sans-serif;
+  color: rgb(212, 211, 209);
+  text-align: left;
+  
+}
 
 /* ______________________________ HEADER _________________________________ */
 
 
 /* 
   NOTE: For the menu css, see "menu_style.css" 
-*/
-
-
-/* 
-! ISSUE: when width == ca. 800px the header stretches beyong the screen height. 
-        (does not cover whole window, but covers more)
 */
 
 
@@ -101,15 +100,6 @@ header-subtitle-container{
   padding: 10px;
 }
 
-h1{
-  font: bold 26vw 'Futura';  
-}
-
-
-h2a{
-  color: rgba(144,131,114,255);
-  font-size:calc((30px + 5vw)/2);
-}
 
 
 
@@ -117,47 +107,70 @@ h2a{
 
 
 main {
-  height: 100vh;
-  /* height: 100%; */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  /* padding: 10px; */
-  /* margin: 2%; */
 }
+
+.full_div{
+  padding: 3vw;
+  width: 100%;
+  row-gap: 20px;
+  flex-direction: column;
+  align-items: center;  
+  display: flex;
+  flex-wrap: wrap;
+  color: rgb(224, 222, 222);
+  /* background-color: #19191993; */
+
+} 
+/* .full_div >  h3{
+color:#bdada1;
+} */
+
+
+/* ---------------- TABLE ----------------  *//* aka; the "I am the right /left side" divs */
+.col {
+  padding: 3vw;
+  row-gap: 20px;
+  flex-direction: column;
+  align-items: center;  
+  display: flex;
+  flex-wrap: wrap;
+  outline: grey solid thin;
+  background:transparent;
+  background-color: #19191993;
+
+}
+
+@media screen and (min-width: 701px) {
+  .row {
+    
+    /* background:transparent; */
+    /* background-color: black; */
+    display: flex;
+    /* margin:1rem; */
+    padding:0.5rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  .row {
+    /* background:transparent; */
+    padding:0rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+
 
 
 /* ______________________________ FOOTER _________________________________ */
-
-
-
-
-
-/* 
-*{
-  box-sizing: border-box;
-}
-
-footer{
-  margin-top: 150px;
-  width: 100%;
-  padding: 100px 15%;
-  justify-content: space-between;
-  color:#efefef;
-  background:#333;
-  display: flex; 
-  width: 100%;
-  bottom: 0rem;
-  text-align: left;
-  position: flex;
-} */
-/* 
-footer div{
-  text-align: center;
-
-} */
-
 
 
 .footer{
@@ -211,68 +224,16 @@ form input{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-
-footer {
-  display:flex;
-  background:black;
-  width: 100%;
-  text-align: left;
-  position: flex;
-  bottom: 0rem;
-
-}
-
-.footer_block {
-  margin: 0;
-  position: flex;
-  bottom: 0rem;
-  width: 100%;
-}
-
-.footer-social-list{
-  padding: 20px;
-  background:transparent;
-  display: flex; 
-  flex-direction: row;
-  justify-content: space-between; 
-}
-
-.footer-links {
-} 
-
- */
-
-
 /* ---------------- FONTS ----------------  */
+h1{
+  font: bold 26vw 'Futura';  
+}
+
+
+h2a{
+  color: #908372;
+  font-size:calc((30px + 5vw)/2); 
+}
 
 
 h2{
@@ -285,95 +246,22 @@ h2{
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
-  display: flex;
-  justify-content:center;
-}
-
-
-h3.footer{
-  /* display: flex; */
-/* text-align: left;
-justify-content:left;
-align-items: left;
-font-size: 2vw; */
 }
 
 h3{
-  color:#9c8470;
-  /* display: flex;  */
-  /* justify-content:center; */
-  /* align-items:center; */
-  /* text-align:center; */
-  /* font-size: 26vw; */
-  /* margin: 0 25%; */
-  /* color: rgba(144,131,114,255); */
-  /* font-size:calc((30px + 5vw)/2); */
+  color:#bdada1;
 }
 h4{
   font-size: 4vw;
   color:#2c2c2c;
 }
-a {
-  font-family: Arial, sans-serif;
-  color: rgb(212, 211, 209);
-  text-align: left;
-}
+
 
 
 /* ______________________________ OTHER _________________________________ */
-/* 
-.full_div{
-  padding: 3vw;
-  width: 100%;
-  row-gap: 20px;
-  flex-direction: column;
-  align-items: center;  
-  display: flex;
-  flex-wrap: wrap;
-} */
 
 
 
-/* ---------------- TABLE ----------------  */
-
-.col {
-  padding: 3vw;
-  /* outline: red solid medium; */
-  row-gap: 20px;
-  flex-direction: column;
-  align-items: center;  
-  display: flex;
-  flex-wrap: wrap;
-  /* margin:0rem; */
-  /* padding:1rem; */
-  outline: grey solid thin;
-  /* background:transparent */
-  background-color: #ee4141;
-  
-}
-
-@media screen and (min-width: 701px) {
-  .row {
-    
-    /* background:transparent; */
-    /* background-color: black; */
-    display: flex;
-    /* margin:1rem; */
-    padding:0.5rem;
-    justify-content: space-between;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-
-  .row {
-    /* background:transparent; */
-    padding:0rem;
-    justify-content: space-between;
-    width: 100%;
-  }
-}
 
 
 

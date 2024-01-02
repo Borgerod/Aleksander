@@ -44,6 +44,7 @@ button.iconbutton:hover {
       background-color: transparent;
       border: 1em;
       outline: rgb(110, 106, 102) solid medium;
+      outline: #6e6a66 solid medium;
       
       color: white;
       text-align: center;
@@ -54,7 +55,11 @@ button.iconbutton:hover {
     }
     
     button.default:hover{
-      outline: #4CAF50 solid medium;
+      /* outline: #4CAF50 solid medium; */
+      /* outline: #ee4141 solid medium; */
+
+      outline: #fa5050 solid medium;
+      color:#f86464;
     }
     
     
