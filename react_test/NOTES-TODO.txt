@@ -1,0 +1,3 @@
+TODO:
+    - figure out how to start a project after a react frame work is initiated (it is currently initiated).
+    - learn about what the different folders do / are used for. 
